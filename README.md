@@ -5,8 +5,8 @@ First build the dependences for the application:
 npm run build
 
 Second start the server:
-npm run start
-Open [http://localhost:3000](http://localhost:3000) to see the result.
+npm run start then you may
+open [http://localhost:3000](http://localhost:3000) to see the result.
 
 
 I would convert my application to use TypeScript and correct caching with more time.
