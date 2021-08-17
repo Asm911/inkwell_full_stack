@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import client from "./api/apollo-client";
 import React from 'react';
 
-
+//Base aplication function to wrap React functionality over ApolloClient to serve to Page rendering
 export default function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');

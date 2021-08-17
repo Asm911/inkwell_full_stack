@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { ApolloClient,InMemoryCache, ApolloProvider,useQuery,gql, } from "@apollo/client";
 import client from "./api/apollo-client";
 import React, { useState } from 'react';
 import {Grid} from '@material-ui/core';
+import {Image} from 'next/image'
 
+//Static GraphQL query to fetch first 10 media items
 const GET_MEDIA = gql `
 query ($id: Int) {
   Page(page: 1, perPage: 10) {
@@ -24,7 +24,9 @@ query ($id: Int) {
   }
 `;
 
+//Main function to render page and parse gql responce
 export default function Home() {
+  //useQuery hook to fetch data to store locally
   const { data, loading, error } = useQuery(GET_MEDIA);
   if (loading) {
     return (
